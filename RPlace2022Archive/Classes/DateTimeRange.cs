@@ -14,6 +14,7 @@ public struct DateTimeRange {
     /// Whether the <see cref="DateTimeRange.End"/> is included in the range or not.
     /// </summary>
     public bool EndInclusive { get; private set; }
+    public TimeSpan Length => End - Start;
 
     /// <summary>
     /// Check if the provided <see cref="DateTime"/> is contained within the <see cref="DateTimeRange"/>
